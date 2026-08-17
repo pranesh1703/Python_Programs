@@ -23,23 +23,18 @@ for i in range (a,0,-1):
         print(i)
 
 #Finding a prime number
-a = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 
-if a < 2:
-    print("Not a prime number")
+for i in range(2, num):
+    if num % i == 0:
+        print(num, "is not a prime number")
+        break
 else:
-    for i in range(2, a):
-        if a % i == 0:
-            print("Not a prime number")
-            break
-    else:
-        print("Prime number")
+    print(num, "is a prime number")
 
 
 #Finding factorial 
 a=int(input("Enter a value: "))
-for i in range (1,a):
-    print(i)
 fact=1
 for i in range (1,a):
     fact=fact*i
